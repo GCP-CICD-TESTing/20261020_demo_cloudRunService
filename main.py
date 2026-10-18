@@ -11,11 +11,15 @@ async def root():
 
 @app.get("/test")
 async def test():
-    return {"message": "It works good! version = 20260605_1051"}
+    return {"message": "It works good! version = 20261017_1700"}
 
 @app.get("/get_key1")
 async def get_key1():
     return {"message": os.getenv("test_key1")}
+
+@app.get("/get_key2")
+async def get_key1():
+    return {"message": os.getenv("test_key2")}
 
 @app.get("/get_project")
 async def get_key():
